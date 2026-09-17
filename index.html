@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IEPEC Student Council Elections 2026 | انتخابات مجلس الطلبة</title>
+  <meta name="description" content="Interactive bilingual presentation about IEPEC International School Student Council Elections — Grades 4 to 11." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+    <div class="orb orb-d"></div>
+    <div class="grid-pattern"></div>
+    <div class="float-shapes">
+      <span class="shape s-green"></span>
+      <span class="shape s-red"></span>
+      <span class="shape s-blue"></span>
+      <span class="shape s-yellow"></span>
+      <span class="shape s-green s2"></span>
+      <span class="shape s-red s2"></span>
+      <span class="shape s-blue s2"></span>
+      <span class="shape s-yellow s2"></span>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/logo.png" alt="IEPEC International School" class="brand-logo" />
+    </div>
+    <div class="topbar-meta">
+      <span class="grade-pill">Grades 4–11 · الصفوف 4–11</span>
+      <button type="button" class="sound-btn" id="soundToggle" aria-pressed="true" title="Toggle sound">
+        <span class="sound-icon" aria-hidden="true">🔊</span>
+        <span class="sound-label">Sound On</span>
+      </button>
+    </div>
+    <div class="iepec-stripe" aria-hidden="true"></div>
+  </header>
+
+  <main class="deck" id="deck" tabindex="0" aria-live="polite">
+
+    <!-- 0: Title -->
+    <section class="slide is-active" data-slide="0" aria-label="Title">
+      <div class="slide-inner title-slide">
+        <p class="eyebrow en">IEPEC International School</p>
+        <p class="eyebrow ar" dir="rtl">مدرسة إيبيك الدولية</p>
+        <h1 class="hero-title">
+          <span class="en">Student Council Elections</span>
+          <span class="ar" dir="rtl">انتخابات مجلس الطلبة</span>
+        </h1>
+        <p class="hero-sub en">Your voice. Your school. Your future.</p>
+        <p class="hero-sub ar" dir="rtl">صوتك. مدرستك. مستقبلك.</p>
+        <div class="hero-date">
+          <span class="en">Election Day: <strong>1 October 2026</strong></span>
+          <span class="ar" dir="rtl">يوم الانتخاب: <strong>١ تشرين الأول ٢٠٢٦</strong></span>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="iepec-tiles">
+            <span class="tile t-green"></span>
+            <span class="tile t-red"></span>
+            <span class="tile t-blue"></span>
+            <span class="tile t-yellow"></span>
+          </div>
+          <div class="ballot-visual">
+            <div class="ballot-box">
+              <div class="ballot-slot"></div>
+              <div class="ballot-paper p1"></div>
+              <div class="ballot-paper p2"></div>
+              <div class="ballot-paper p3"></div>
+            </div>
+            <div class="students-row">
+              <span class="stu s1">👨‍🎓</span>
+              <span class="stu s2">👩‍🎓</span>
+              <span class="stu s3">🧑‍🎓</span>
+              <span class="stu s4">👧</span>
+            </div>
+          </div>
+          <div class="sparkles">
+            <i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+        <button type="button" class="cta start-btn" data-go="1">
+          <span class="en">Start the Journey</span>
+          <span class="ar" dir="rtl">ابدأ الرحلة</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 1: Audience -->
+    <section class="slide" data-slide="1" aria-label="Who is this for">
+      <div class="slide-inner">
+        <h2 class="slide-title">
+          <span class="en">Who Is This For?</span>
+          <span class="ar" dir="rtl">لمن هذا العرض؟</span>
+        </h2>
+        <p class="slide-lead en">Students from Grade 4 to Grade 11 — future leaders of IEPEC.</p>
+        <p class="slide-lead ar" dir="rtl">طلاب من الصف الرابع إلى الصف الحادي عشر — قادة إيبيك المستقبليون.</p>
+        <div class="grade-grid">
+          <button type="button" class="grade-card" data-tone="green"><span>4</span><small>Grade</small><em>الصف</em></button>
+          <button type="button" class="grade-card" data-tone="red"><span>5</span><small>Grade</small><em>الصف</em></button>
+          <button type="button" class="grade-card" data-tone="blue"><span>6</span><small>Grade</small><em>الصف</em></button>
+          <button type="button" class="grade-card" data-tone="yellow"><span>7</span><small>Grade</small><em>الصف</em></button>
+          <button type="button" class="grade-card" data-tone="green"><span>8</span><small>Grade</small><em>الصف</em></button>
+          <button type="button" class="grade-card" data-tone="red"><span>9</span><small>Grade</small><em>الصف</em></button>
+          <button type="button" class="grade-card" data-tone="blue"><span>10</span><small>Grade</small><em>الصف</em></button>
+          <button type="button" class="grade-card" data-tone="yellow"><span>11</span><small>Grade</small><em>الصف</em></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2: Process overview -->
+    <section class="slide" data-slide="2" aria-label="Election process overview">
+      <div class="slide-inner">
+        <h2 class="slide-title">
+          <span class="en">The Election Journey</span>
+          <span class="ar" dir="rtl">رحلة الانتخابات</span>
+        </h2>
+        <p class="slide-lead en">Six clear steps from announcement to winners.</p>
+        <p class="slide-lead ar" dir="rtl">ست خطوات واضحة من الإعلان حتى الفائزين.</p>
+        <ol class="journey" id="journeyMap">
+          <li class="journey-step" data-go="3" data-tone="green">
+            <span class="num">1</span>
+            <span class="j-icon" aria-hidden="true">📢</span>
+            <div>
+              <strong class="en">Announcement</strong>
+              <strong class="ar" dir="rtl">الإعلان</strong>
+            </div>
+          </li>
+          <li class="journey-step" data-go="4" data-tone="red">
+            <span class="num">2</span>
+            <span class="j-icon" aria-hidden="true">📨</span>
+            <div>
+              <strong class="en">Nomination</strong>
+              <strong class="ar" dir="rtl">الترشيح</strong>
+            </div>
+          </li>
+          <li class="journey-step" data-go="5" data-tone="blue">
+            <span class="num">3</span>
+            <span class="j-icon" aria-hidden="true">🎯</span>
+            <div>
+              <strong class="en">Campaign</strong>
+              <strong class="ar" dir="rtl">الحملة</strong>
+            </div>
+          </li>
+          <li class="journey-step" data-go="6" data-tone="yellow">
+            <span class="num">4</span>
+            <span class="j-icon" aria-hidden="true">🎤</span>
+            <div>
+              <strong class="en">Speech</strong>
+              <strong class="ar" dir="rtl">الكلمة</strong>
+            </div>
+          </li>
+          <li class="journey-step" data-go="7" data-tone="green">
+            <span class="num">5</span>
+            <span class="j-icon" aria-hidden="true">🗳️</span>
+            <div>
+              <strong class="en">Voting</strong>
+              <strong class="ar" dir="rtl">التصويت</strong>
+            </div>
+          </li>
+          <li class="journey-step" data-go="8" data-tone="red">
+            <span class="num">6</span>
+            <span class="j-icon" aria-hidden="true">🏆</span>
+            <div>
+              <strong class="en">Winners</strong>
+              <strong class="ar" dir="rtl">الفائزون</strong>
+            </div>
+          </li>
+        </ol>
+        <div class="journey-path" aria-hidden="true">
+          <svg viewBox="0 0 600 40" preserveAspectRatio="none">
+            <path d="M10 20 C 100 0, 200 40, 300 20 S 500 0, 590 20" fill="none" stroke="url(#pathGrad)" stroke-width="4" stroke-dasharray="8 8"/>
+            <defs>
+              <linearGradient id="pathGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#2e9b4f"/>
+                <stop offset="33%" stop-color="#d64545"/>
+                <stop offset="66%" stop-color="#2f6fed"/>
+                <stop offset="100%" stop-color="#e6b422"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3: Announcement -->
+    <section class="slide" data-slide="3" aria-label="Step 1 Announcement">
+      <div class="slide-inner split">
+        <div class="copy-col">
+          <span class="step-badge" data-tone="green">Step 1 · الخطوة ١</span>
+          <h2 class="slide-title">
+            <span class="en">Announcement</span>
+            <span class="ar" dir="rtl">الإعلان عن الانتخابات</span>
+          </h2>
+          <p class="bilingual">
+            <span class="en">The school announces the Student Council elections and the official election date.</span>
+            <span class="ar" dir="rtl">تعلن المدرسة عن انتخابات مجلس الطلبة وعن الموعد الرسمي للانتخاب.</span>
+          </p>
+          <p class="bilingual">
+            <span class="en">Students learn the rules, timeline, and how to take part with respect and fairness.</span>
+            <span class="ar" dir="rtl">يتعرّف الطلاب على القواعد والجدول الزمني وكيفية المشاركة باحترام وعدالة.</span>
+          </p>
+        </div>
+        <div class="visual-col">
+          <div class="graphic megaphone-scene" aria-hidden="true">
+            <div class="scene-badge">📢</div>
+            <div class="megaphone"></div>
+            <div class="sound-wave w1"></div>
+            <div class="sound-wave w2"></div>
+            <div class="sound-wave w3"></div>
+            <div class="poster-card">
+              <span>1 / 10 / 2026</span>
+            </div>
+            <div class="mini-kids">
+              <span>👂</span><span>👂</span><span>👂</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4: Nomination -->
+    <section class="slide" data-slide="4" aria-label="Step 2 Nomination">
+      <div class="slide-inner split">
+        <div class="copy-col">
+          <span class="step-badge" data-tone="red">Step 2 · الخطوة ٢</span>
+          <h2 class="slide-title">
+            <span class="en">Nomination</span>
+            <span class="ar" dir="rtl">ترشيح الطلاب</span>
+          </h2>
+          <p class="bilingual">
+            <span class="en">The student expresses the wish to run as a candidate, then the parent / guardian must send an approval message to the school.</span>
+            <span class="ar" dir="rtl">يُعرب الطالب عن رغبته في الترشح، ثم يجب على ولي الأمر إرسال رسالة موافقة إلى المدرسة.</span>
+          </p>
+          <p class="bilingual">
+            <span class="en">Without parental approval, the nomination cannot be completed — so candidates and families take this step together.</span>
+            <span class="ar" dir="rtl">بدون موافقة ولي الأمر لا يكتمل الترشيح — لذلك يتعاون المرشح وأسرته لإتمام هذه الخطوة.</span>
+          </p>
+        </div>
+        <div class="visual-col">
+          <div class="graphic phone-scene" aria-hidden="true">
+            <div class="phone">
+              <div class="phone-notch"></div>
+              <div class="msg">
+                <span class="msg-label">Parent → School</span>
+                <p>I approve my child’s nomination · أوافق على ترشح ابني/ابنتي</p>
+              </div>
+              <div class="msg reply">✓ Received by IEPEC · استلمتها المدرسة</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5: Campaign -->
+    <section class="slide" data-slide="5" aria-label="Step 3 Campaign">
+      <div class="slide-inner split">
+        <div class="copy-col">
+          <span class="step-badge" data-tone="blue">Step 3 · الخطوة ٣</span>
+          <h2 class="slide-title">
+            <span class="en">Election Campaign</span>
+            <span class="ar" dir="rtl">الحملة الانتخابية</span>
+          </h2>
+          <p class="bilingual">
+            <span class="en">Each candidate runs a positive campaign: posters, ideas, and respectful conversations with classmates.</span>
+            <span class="ar" dir="rtl">يقوم كل مرشح بحملة إيجابية: ملصقات وأفكار وحوار محترم مع الزملاء.</span>
+          </p>
+          <p class="bilingual">
+            <span class="en">Focus on solutions for the school community — not on competing against others unfairly.</span>
+            <span class="ar" dir="rtl">التركيز على حلول لمجتمع المدرسة — لا على منافسة غير عادلة.</span>
+          </p>
+        </div>
+        <div class="visual-col">
+          <div class="graphic campaign-scene" aria-hidden="true">
+            <div class="poster poster-a">Listen · استمع</div>
+            <div class="poster poster-b">Lead · قُد</div>
+            <div class="poster poster-c">Serve · اخدم</div>
+            <div class="campaign-kids">
+              <span>🙋</span><span>✋</span><span>📣</span>
+            </div>
+            <div class="confetti c1"></div>
+            <div class="confetti c2"></div>
+            <div class="confetti c3"></div>
+            <div class="confetti c4"></div>
+            <div class="confetti c5"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6: Speech -->
+    <section class="slide" data-slide="6" aria-label="Step 4 Speech">
+      <div class="slide-inner split">
+        <div class="copy-col">
+          <span class="step-badge" data-tone="yellow">Step 4 · الخطوة ٤</span>
+          <h2 class="slide-title">
+            <span class="en">Candidate Speech</span>
+            <span class="ar" dir="rtl">كلمة المرشح</span>
+          </h2>
+          <p class="bilingual">
+            <span class="en">Every candidate delivers a speech presenting their election programme and promises.</span>
+            <span class="ar" dir="rtl">يلقي كل مرشح كلمة تعرض برنامجه الانتخابي ووعوده.</span>
+          </p>
+          <p class="bilingual">
+            <span class="en">Speak clearly, be honest, and show how you will help students from Grades 4–11.</span>
+            <span class="ar" dir="rtl">تكلم بوضوح، كن صادقاً، وأظهر كيف ستساعد طلاب الصفوف ٤–١١.</span>
+          </p>
+        </div>
+        <div class="visual-col">
+          <div class="graphic speech-scene" aria-hidden="true">
+            <div class="stage">
+              <div class="mic"></div>
+              <div class="speaker"></div>
+              <div class="crowd">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7: Voting day -->
+    <section class="slide" data-slide="7" aria-label="Step 5 Voting">
+      <div class="slide-inner split">
+        <div class="copy-col">
+          <span class="step-badge" data-tone="green">Step 5 · الخطوة ٥</span>
+          <h2 class="slide-title">
+            <span class="en">Election Day</span>
+            <span class="ar" dir="rtl">يوم الانتخابات</span>
+          </h2>
+          <p class="bilingual">
+            <span class="en">Students vote on <strong>1 / 10 / 2026</strong> in a fair, secret, and respectful process.</span>
+            <span class="ar" dir="rtl">يصوّت الطلاب بتاريخ <strong>١ / ١٠ / ٢٠٢٦</strong> بطريقة عادلة وسرية ومحترمة.</span>
+          </p>
+          <p class="bilingual">
+            <span class="en">One student — one vote. Choose the candidate who best represents your voice.</span>
+            <span class="ar" dir="rtl">طالب واحد — صوت واحد. اختر المرشح الذي يمثل صوتك بأفضل شكل.</span>
+          </p>
+          <button type="button" class="cta vote-demo-btn" id="voteDemoBtn">
+            <span class="en">Try a Demo Vote</span>
+            <span class="ar" dir="rtl">جرّب تصويتاً تجريبياً</span>
+          </button>
+        </div>
+        <div class="visual-col">
+          <div class="graphic vote-scene" aria-hidden="true">
+            <div class="big-date">
+              <span class="d">1</span>
+              <span class="m">OCT</span>
+              <span class="y">2026</span>
+            </div>
+            <div class="ballot-drop">
+              <div class="drop-paper" id="dropPaper"></div>
+              <div class="drop-box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8: Winners -->
+    <section class="slide" data-slide="8" aria-label="Step 6 Winners">
+      <div class="slide-inner split">
+        <div class="copy-col">
+          <span class="step-badge" data-tone="red">Step 6 · الخطوة ٦</span>
+          <h2 class="slide-title">
+            <span class="en">Announce the Winners</span>
+            <span class="ar" dir="rtl">الإعلان عن الفائزين</span>
+          </h2>
+          <p class="bilingual">
+            <span class="en">After counting the votes, the school announces the winning student council members.</span>
+            <span class="ar" dir="rtl">بعد فرز الأصوات، تعلن المدرسة عن أعضاء مجلس الطلبة الفائزين.</span>
+          </p>
+          <p class="bilingual">
+            <span class="en">We celebrate every candidate — running already shows courage and leadership.</span>
+            <span class="ar" dir="rtl">نحتفل بكل المرشحين — الترشح نفسه يظهر الشجاعة والقيادة.</span>
+          </p>
+        </div>
+        <div class="visual-col">
+          <div class="graphic winners-scene" aria-hidden="true">
+            <div class="trophy">🏆</div>
+            <div class="stars">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="winner-banner">
+              <span class="en">New Student Council</span>
+              <span class="ar" dir="rtl">مجلس الطلبة الجديد</span>
+            </div>
+            <div class="winner-avatars">
+              <span>🥇</span><span>🥈</span><span>🥉</span>
+            </div>
+            <div class="burst b1"></div>
+            <div class="burst b2"></div>
+            <div class="burst b3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9: Roles -->
+    <section class="slide" data-slide="9" aria-label="Roles and responsibilities">
+      <div class="slide-inner">
+        <h2 class="slide-title">
+          <span class="en">What Does a Winner Do?</span>
+          <span class="ar" dir="rtl">ماذا يفعل الطالب الفائز؟</span>
+        </h2>
+        <p class="slide-lead en">Understand the role before you run — leadership is service.</p>
+        <p class="slide-lead ar" dir="rtl">افهم الدور قبل أن تترشح — القيادة خدمة.</p>
+        <div class="roles-grid">
+          <article class="role-card" data-tone="green">
+            <div class="role-icon">🗣️</div>
+            <h3 class="en">Represent Students</h3>
+            <h3 class="ar" dir="rtl">تمثيل الطلاب</h3>
+            <p class="en">Share student ideas and concerns with teachers and school leaders.</p>
+            <p class="ar" dir="rtl">نقل أفكار الطلاب وملاحظاتهم للمعلمين وإدارة المدرسة.</p>
+          </article>
+          <article class="role-card" data-tone="red">
+            <div class="role-icon">🤝</div>
+            <h3 class="en">Organize Activities</h3>
+            <h3 class="ar" dir="rtl">تنظيم الأنشطة</h3>
+            <p class="en">Help plan events, clubs, and school spirit days for Grades 4–11.</p>
+            <p class="ar" dir="rtl">المساعدة في تنظيم الفعاليات والأندية وأيام روح المدرسة للصفوف ٤–١١.</p>
+          </article>
+          <article class="role-card" data-tone="blue">
+            <div class="role-icon">⚖️</div>
+            <h3 class="en">Promote Fairness</h3>
+            <h3 class="ar" dir="rtl">تعزيز العدالة</h3>
+            <p class="en">Encourage respect, inclusion, and positive behaviour across the school.</p>
+            <p class="ar" dir="rtl">تشجيع الاحترام والاندماج والسلوك الإيجابي في المدرسة.</p>
+          </article>
+          <article class="role-card" data-tone="yellow">
+            <div class="role-icon">🌱</div>
+            <h3 class="en">Grow as a Leader</h3>
+            <h3 class="ar" dir="rtl">النمو كقائد</h3>
+            <p class="en">Build communication, teamwork, and responsibility skills for life.</p>
+            <p class="ar" dir="rtl">بناء مهارات التواصل والعمل الجماعي والمسؤولية للحياة.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10: Why run -->
+    <section class="slide" data-slide="10" aria-label="Why run">
+      <div class="slide-inner">
+        <h2 class="slide-title">
+          <span class="en">Why Should You Run?</span>
+          <span class="ar" dir="rtl">لماذا تترشح؟</span>
+        </h2>
+        <ul class="why-list">
+          <li>
+            <span class="why-emoji" aria-hidden="true">💚</span>
+            <div>
+              <span class="en">You care about making IEPEC better for everyone.</span>
+              <span class="ar" dir="rtl">لأنك تهتم بجعل إيبيك أفضل للجميع.</span>
+            </div>
+          </li>
+          <li>
+            <span class="why-emoji" aria-hidden="true">🗣️</span>
+            <div>
+              <span class="en">You want to practise real leadership and public speaking.</span>
+              <span class="ar" dir="rtl">لأنك تريد ممارسة القيادة الحقيقية والخطابة.</span>
+            </div>
+          </li>
+          <li>
+            <span class="why-emoji" aria-hidden="true">💡</span>
+            <div>
+              <span class="en">You can turn student ideas into real school improvements.</span>
+              <span class="ar" dir="rtl">لأنك تستطيع تحويل أفكار الطلاب إلى تحسينات حقيقية.</span>
+            </div>
+          </li>
+          <li>
+            <span class="why-emoji" aria-hidden="true">🚀</span>
+            <div>
+              <span class="en">Win or learn — every candidate grows stronger.</span>
+              <span class="ar" dir="rtl">فوز أو تعلّم — كل مرشح يصبح أقوى.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 11: Closing -->
+    <section class="slide" data-slide="11" aria-label="Closing">
+      <div class="slide-inner title-slide closing">
+        <img src="assets/logo.png" alt="" class="closing-logo" />
+        <h2 class="slide-title">
+          <span class="en">Be Ready. Be Fair. Be Heard.</span>
+          <span class="ar" dir="rtl">كن جاهزاً. كن عادلاً. ليُسمَع صوتك.</span>
+        </h2>
+        <p class="hero-sub en">Student Council Elections — 1 October 2026</p>
+        <p class="hero-sub ar" dir="rtl">انتخابات مجلس الطلبة — ١ تشرين الأول ٢٠٢٦</p>
+        <p class="bilingual center">
+          <span class="en">IEPEC International School · Grades 4–11</span>
+          <span class="ar" dir="rtl">مدرسة إيبيك الدولية · الصفوف ٤–١١</span>
+        </p>
+        <button type="button" class="cta" data-go="0">
+          <span class="en">Replay Presentation</span>
+          <span class="ar" dir="rtl">إعادة العرض</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="Presentation controls">
+    <div class="controls-progress">
+      <div class="progress-wrap">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+    <div class="controls-row">
+      <button type="button" class="nav-btn" id="prevBtn" aria-label="Previous slide">←</button>
+      <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+      <div class="slide-counter" id="progressText" aria-live="polite">
+        <span class="counter-num">1</span>
+        <span class="counter-sep">/</span>
+        <span class="counter-total">12</span>
+      </div>
+      <button type="button" class="nav-btn primary" id="nextBtn" aria-label="Next slide">→</button>
+    </div>
+    <div class="controls-stripe" aria-hidden="true"></div>
+  </nav>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
