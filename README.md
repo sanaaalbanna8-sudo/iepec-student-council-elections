@@ -1,6 +1,6 @@
 # IEPEC Student Council Elections 2026
 
-Interactive bilingual (English + Arabic) web presentation for **IEPEC International School** student council elections — Grades 4–11.
+Interactive bilingual (English + Arabic) web presentation for **IEPEC International School** student council elections — Grades 5–11.
 
 Live school site: [iia.edu.jo](https://www.iia.edu.jo/)
 
@@ -34,13 +34,13 @@ Then visit `http://localhost:8080`
 ## Contents
 
 1. Title  
-2. Audience (Grades 4–11)  
+2. Audience (Grades 5–11)  
 3. Election journey overview  
 4. Announcement  
 5. Nomination (parent message)  
 6. Campaign  
 7. Candidate speech  
-8. Election day — 1/10/2026  
+8. Election day — 8/10/2026  
 9. Winners announcement  
 10. Winner roles & duties  
 11. Why run  
