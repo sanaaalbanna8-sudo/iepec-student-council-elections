@@ -149,6 +149,19 @@
     });
   }
 
+  function fitSlides() {
+    slides.forEach((slide) => {
+      const inner = slide.querySelector(".slide-inner");
+      if (!inner) return;
+      inner.style.zoom = "1";
+      const boxH = inner.clientHeight;
+      const boxW = inner.clientWidth;
+      if (boxH < 40 || boxW < 40) return;
+      const scale = Math.min(1, boxH / inner.scrollHeight, boxW / inner.scrollWidth);
+      inner.style.zoom = scale < 0.992 ? String(Math.floor(scale * 1000) / 1000) : "1";
+    });
+  }
+
   function updateUI() {
     progressBar.style.width = `${((index + 1) / total) * 100}%`;
     const num = progressText.querySelector(".counter-num");
@@ -164,6 +177,7 @@
     dotsWrap.querySelectorAll(".dot").forEach((dot, i) => {
       dot.classList.toggle("is-active", i === index);
     });
+    fitSlides();
   }
 
   function goTo(next, withSound = true) {
@@ -284,6 +298,11 @@
       dropPaper.classList.add("is-dropping");
       showToast("Vote cast successfully!", "تم الإدلاء بالصوت بنجاح!");
     });
+  }
+
+  window.addEventListener("resize", () => fitSlides());
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => fitSlides());
   }
 
   ["pointerdown", "keydown"].forEach((evt) => {
